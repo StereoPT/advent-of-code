@@ -1,0 +1,24 @@
+{
+  "name": "advent-of-code",
+  "version": "1.0.0",
+  "description": "Advent of Code",
+  "type": "module",
+  "scripts": {
+    "start": "node src/day1.js",
+    "dev": "nodemon src/day1.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StereoPT/advent-of-code.git"
+  },
+  "keywords": [],
+  "author": "StereoPT",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StereoPT/advent-of-code/issues"
+  },
+  "homepage": "https://github.com/StereoPT/advent-of-code#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
