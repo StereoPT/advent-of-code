@@ -40,25 +40,22 @@ for (const lineIndex in fileLines) {
   const lineNumbers = [...extractNumbers(line)];
 
   let lineNumbersArea = [];
-  for (const number of lineNumbers) {
+  for (const lineNumber of lineNumbers) {
+    const number = lineNumber[0];
+
     const area = getNumberArea(
       fileLines,
       Number(lineIndex),
-      Number(number.index),
-      number[0],
+      Number(lineNumber.index),
+      number,
     );
-    lineNumbersArea.push({ number: Number(number[0]), area });
+
+    lineNumbersArea.push({ number: Number(number), area });
   }
 
-  const lineSum = lineNumbersArea.reduce((acc, { number, area }) => {
-    if (area.match(/[*&\+\-#@$/=%]/g)) {
-      return acc + number;
-    }
-
-    return acc;
+  partSum += lineNumbersArea.reduce((acc, { number, area }) => {
+    return area.match(/[^\d\.]/g) ? acc + number : acc;
   }, 0);
-
-  partSum += lineSum;
 }
 
 console.log(`Sum of Part Numbers: ${partSum}`);
