@@ -4,8 +4,8 @@
   "description": "Advent of Code",
   "type": "module",
   "scripts": {
-    "start": "node src/day3.js",
-    "dev": "nodemon src/day3.js"
+    "start": "node src/day4.js",
+    "dev": "nodemon src/day4.js"
   },
   "repository": {
     "type": "git",
